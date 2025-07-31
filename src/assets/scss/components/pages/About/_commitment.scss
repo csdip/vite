@@ -1,0 +1,82 @@
+@use '../../../utils/' as *;
+@use '../../../global/' as *;
+
+// Commitment Desktop
+.commitment{
+    margin-bottom: 30rem;
+
+    &__img-content{
+        border-radius: 1rem;
+        overflow: hidden;
+
+        img{
+            width: 100%;
+        }
+    }
+    &__text-content{
+        width: 56.8rem;
+        margin-left: 10rem;
+        h2{
+            font-size: 3.2rem;
+            margin-bottom: 3rem;
+        }
+        p{
+            color: $color-secondary;
+        }
+    }
+}
+
+
+
+
+
+// Commitment Lg
+@include lg{
+    .commitment{
+        &__text-content{
+            margin-left: 4rem;
+        }
+    }
+}
+
+
+
+
+// Commitment Tablet
+@include tablet{
+    .commitment{
+        .col-4,
+        .col-8{
+            width: 50%;
+        }
+        &__text-content{
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}
+
+
+
+
+
+// Commitment Mobile
+@include mobile{
+    .commitment{
+        margin-bottom: 10rem;
+        .col-4,
+        .col-8{
+            width: 100%;
+        }
+
+        &__img-content{
+            margin-bottom: 5rem;
+        }
+        &__text-content{
+            text-align: center;
+            h2{
+                font-size: 2.8rem;
+            }
+        }
+    }
+}

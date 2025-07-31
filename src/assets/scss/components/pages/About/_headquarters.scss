@@ -1,0 +1,90 @@
+@use '../../../utils/' as *;
+@use '../../../global/' as *;
+
+// Headquarters Desktop
+.headquarters{
+    span{
+        font-size: 2.4rem;
+        font-weight: $black;
+        margin-bottom: 8rem;
+        color: $color-dark-grey;
+        display: block;
+        font-family: $f-f-fraunces;
+    }
+    &__single{
+        h2 {
+            margin: 3rem 0;
+            font-size: 3.2rem;
+            font-weight: $black;
+            color: $color-secondary;
+        }
+        p{
+            font-size: 1.6rem;
+            color: $color-dark-grey;
+            font-family: $f-f-barlow;
+            width: 15rem;
+        }
+    }
+}
+
+
+
+
+// Headquarters Lg
+
+
+
+
+
+
+// Headquarters Tablet
+@include tablet{
+    .headquarters{
+        .col-4{
+            width: 33.33%;
+        }
+
+        &__single{
+            .text-content{
+                h2{
+                    font-size: 2.2rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+// Headquarters Mobile
+@include mobile{
+    .headquarters{
+
+        span{
+            text-align: center;
+        }
+        .col-4{
+            width: 100%;
+
+            &:not(:last-child){
+                margin-bottom: 5rem;
+            }
+        }
+
+        &__single{
+            text-align: center;
+
+ 
+            .text-content{
+                h2{
+                    font-size: 2.2rem;
+                }
+                p{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

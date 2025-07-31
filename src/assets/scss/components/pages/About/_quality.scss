@@ -1,0 +1,106 @@
+@use '../../../utils/' as *;
+@use '../../../global/' as *;
+
+// Quality Desktop
+.quality{
+    .wrapper{
+        position: relative;
+        background-image: url('/img/bg-texture.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        padding: 20rem 5rem;
+        border-radius: 1rem;
+    }
+    &__img-content{
+        border-radius: 1rem;
+        overflow: hidden;
+        position: absolute;
+        top: -10rem;
+        right: 5rem;
+
+        img{
+            width: 100%;
+        }
+    }
+    &__text-content{
+        width: 50rem;
+        margin-right: auto;
+        h2{
+            font-size: 3.2rem;
+            color: $color-light;
+            margin-bottom: 3rem;
+        }
+        p{
+            color: $color-grey;
+        }
+    }
+}
+
+
+
+
+
+// Quality Lg
+@include lg{
+    .quality{
+        &__text-content{
+            width: 40rem;
+        }
+    }
+}
+
+
+
+
+// Quality Tablet
+@include tablet{
+    .quality{
+        .col-4{
+            width: 50%;
+        }
+        .col-8{
+            width: 50%;
+        }
+        &__text-content{
+            width: 20rem;
+            margin-left: 0;
+        }
+    }
+}
+
+
+
+
+
+// Quality Mobile
+@include mobile{
+    .quality{
+        .wrapper{
+            padding: 5rem 1rem;
+        }
+        .container{
+            padding: 0 3.5rem;
+        }
+        .col-4{
+            width: 100%;
+        }
+        .col-8{
+            width: 100%;
+        }
+
+        &__img-content{
+            position: unset;
+        }
+        &__text-content{
+            margin-bottom: 5rem;
+            text-align: center;
+            width: 100%;
+
+            h2{
+                font-size: 2.8rem;
+            }
+        }
+    }
+}

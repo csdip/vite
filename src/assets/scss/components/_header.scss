@@ -1,0 +1,114 @@
+@use "../utils/" as *;
+@use "../global" as *;
+
+// Header Desktop
+.header{
+    position: relative;
+    padding: 4rem 0;
+
+    &__logo{
+        img{
+            width: 100%;
+        }
+    }
+    &__main-menu{
+        display: flex;
+        
+        li{
+            margin-left: 2.5rem;
+
+            a{
+                font-size: 1.3rem;
+                text-transform: uppercase;
+                color: $color-dark-grey;
+                font-weight: $semibold;
+                transition: all .3s ease;
+
+                &:hover{
+                    color: $color-secondary;
+                }
+                &.active{
+                    color: $color-secondary;
+                }
+            }
+        }
+    }
+
+    &__nav-btn{
+        display: none;
+        width: 4rem;
+        height: 4rem;
+        cursor: pointer;
+        
+        &::before{
+            content: '\ef3e';
+            position: absolute;
+            font-family: remixicon;
+            font-size: 4rem;
+            color: $color-secondary;
+        }
+        
+        &.active::before{
+            content: '\f4c7';
+        }
+    }
+}
+
+
+
+
+
+// Header Tablet
+
+
+
+
+
+
+// Header Mobile
+@include mobile{
+    .header{
+        padding: 3rem 0;
+        &__logo{
+            width: 20rem;
+        }
+        &__main-menu{
+            position: absolute;
+            background-color: $color-primary;
+            top: 10rem;
+            left: 2rem;
+            right: 2rem;
+            border-radius: 1rem;
+            padding: 2rem 2rem 6rem;
+            flex-direction: column;
+            box-shadow: $box-shadow;
+            visibility: hidden;
+            opacity: 0;
+            transition: all .4s ease;
+            z-index: 99;
+
+            &.active{
+                visibility: visible;
+                opacity: 1;
+            }
+
+            li{
+                margin: 1rem 0;
+                width: 100%;
+                text-align: center;
+
+                a{
+                    color: $color-light;
+                    
+                    &:hover{
+                        color: $color-light-orange;
+                    }
+                }
+            }
+        }
+
+        &__nav-btn{
+            display: block;
+        }
+    }
+}

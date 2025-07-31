@@ -1,0 +1,24 @@
+@use '../../../utils/' as *;
+@use '../../../global/' as *;
+
+// Hero Desktop
+.hero{
+    .page-plan{
+        @include planHeroImgDesktop;
+    }
+}
+
+
+// Hero Tablet
+@include tablet{
+    .hero{
+        .page-plan{
+            @include planHeroImgMobile;
+        }
+    }
+}
+
+
+
+
+// Hero Mobile

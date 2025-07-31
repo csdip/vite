@@ -1,0 +1,80 @@
+@use "../utils/" as *;
+@use "../global" as *;
+
+// Footer Desktop
+.footer{
+    
+    &__wrapper{
+        background-color: $color-secondary;
+        padding: 4rem 6rem;
+        margin-bottom: 4rem;
+    }
+
+    &__menu{
+        li{
+            margin: 0 1.5rem;
+
+            a{
+                font-size: 1.3rem;
+                text-transform: uppercase;
+                color: $color-dark-grey;
+                font-weight: $semibold;
+                transition: all .3s ease;
+
+                &:hover{
+                    color: $color-light;
+                }
+        }
+    }
+}
+
+    &__socials{
+        li{
+            margin: 0 1rem;
+
+            i{
+                font-size: 5rem;
+                text-transform: uppercase;
+                color: $color-light;
+                transition: all .3s ease;
+
+                &:hover{
+                    color: $color-primary;
+                }
+        }
+    }
+}
+}
+
+
+
+// Footer Tablet
+@include tablet{
+    .footer{
+        &__wrapper{
+            flex-direction: column;
+        }
+
+        &__menu{
+            margin: 4rem 0;
+        }
+    }
+}
+
+
+
+
+// Footer Mobile
+@include mobile{
+    .footer{
+
+        &__menu{
+            margin: 4rem 0;
+            flex-direction: column;
+
+            li{
+                margin: 1rem 0;
+            }
+        }
+    }
+}

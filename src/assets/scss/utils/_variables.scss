@@ -1,0 +1,82 @@
+
+
+// =============== Google Font Links ===============
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap');
+
+
+
+/* -------------------------------------
+             Template Fonts
+------------------------------------- */
+
+$regular: 400;
+$semibold: 600;
+$bold: 700;
+$black: 900;
+$f-f-fraunces: "Fraunces", serif;
+$f-f-barlow: "Barlow", sans-serif;
+
+
+
+
+
+
+/* -------------------------------------
+            Template Colors
+------------------------------------- */
+
+$color-dark: #000000;
+$color-light: #ffffff;
+$color-grey: #DBDBDB;
+$color-dark-grey: #83888f;
+$color-bg: #FEFCF6;
+$color-primary: #0E8684;
+$color-secondary: #2C353E;
+$color-light-orange: #FED4B6;
+$box-shadow:0 14px 16px -4px rgba(0, 0, 0, 0.1);
+
+
+
+
+
+ 
+.preloader {
+    width: 15px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    animation: l5 1s infinite linear alternate;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+  }
+
+  .loader-container{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: $color-secondary;
+    width: 100vw;
+    height: 100vh;
+    z-index: 88;
+  }
+
+
+  @keyframes l5 {
+      0%  {box-shadow: 20px 0 $color-primary, -20px 0 #0002;background: $color-primary }
+      33% {box-shadow: 20px 0 $color-primary, -20px 0 #0002;background: #0002}
+      66% {box-shadow: 20px 0 #0002,-20px 0 $color-primary; background: #0002}
+      100%{box-shadow: 20px 0 #0002,-20px 0 $color-primary; background: $color-primary }
+  }
+
+
+  .container-hidden{
+    opacity: 0 !important;
+    visibility: hidden !important;
+    display: none !important;
+}
+
+

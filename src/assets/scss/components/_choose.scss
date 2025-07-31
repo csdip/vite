@@ -1,0 +1,161 @@
+@use "../utils/" as *;
+@use "../global" as *;
+
+// Choose Desktop
+.choose{
+    margin-bottom: 35rem;
+
+    .wrapper{
+        background-color: $color-secondary;
+        background-image: url("/img/bg-texture.png");
+        background-repeat: repeat;
+        border-radius: 1rem;
+        padding: 10rem;
+
+        .sec-title{
+            text-align: center;
+            margin-bottom: 10rem;
+            width: 54rem;
+            margin-inline: auto;
+
+            h2{
+                font-size: 4.2rem;
+                margin-bottom: 2rem;
+                color: $color-bg;
+            }
+        }
+
+        .single-wrapper{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            grid-gap: 3rem;
+            text-align: center;
+            margin-bottom: -24rem;
+            
+            .single{
+                padding: 5rem 3rem;
+                border-radius: 1rem;
+                background-color: $color-primary;
+
+                img{
+                    margin-bottom: 4rem;
+                }
+                h3{
+                    font-size: 2.6rem;
+                    margin: 2.5rem 0;
+                    color: $color-bg;
+                }
+                p{
+                    color: $color-bg;
+                }
+            }
+        }
+    }
+}
+
+
+// Choose Lg
+@include lg{
+    .choose{
+        .wrapper{
+            padding: 10rem 5rem;
+        }
+    }
+}
+
+
+// Choose Tablet
+@include tablet{
+    .choose{
+        margin-bottom: 40rem;
+        .wrapper{
+
+            .single-wrapper{
+            grid-template-columns: 1fr;
+            margin-bottom: -40rem;
+
+            .single{
+            text-align: left;
+            position: relative;
+            padding: 7rem 3rem;
+
+            img{
+                margin-bottom: 0 !important;
+                padding-left: 4rem;
+                width: 100px;
+            }
+
+            h3{
+                margin-top: 0 !important;
+            }
+
+            .text-content{
+                position: absolute;
+                top: 50%;
+                right: 2rem;
+                width: 40rem;
+                transform: translateY(-50%);
+            }
+        }
+        }
+        }
+    }
+}
+
+
+
+// Choose Mobile
+
+@include mobile{
+    .choose{
+        margin-bottom: 70rem;
+        .wrapper{
+            padding: 5rem 2rem;
+
+            .sec-title{
+                width: 100%;
+                margin-bottom: 6rem;
+
+                h2{
+                    font-size: 3.2rem;
+                }
+
+                h3{
+                    font-size: 3.2rem;
+                }
+            }
+
+            .single-wrapper{
+            grid-template-columns: 1fr;
+            margin-bottom: -60rem;
+            grid-gap: 2rem;
+
+            .single{
+            text-align: center;
+            position: unset;
+            padding: 7rem 3rem;
+
+            img{
+                margin-bottom: 3rem !important;
+                padding-left: 0;
+                width: 60px;
+            }
+
+            h3{
+                margin-top: 0 !important;
+                font-size: 2.3rem;
+            }
+
+            .text-content{
+                position: unset;
+                top: 0;
+                right: 0;
+                width: 100%;
+                transform: none;
+            }
+        }
+        }
+        }
+    }
+}

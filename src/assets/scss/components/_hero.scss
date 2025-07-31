@@ -1,0 +1,73 @@
+@use "../utils/" as *;
+@use "../global" as *;
+
+// Hero Desktop
+.hero{
+    margin-bottom: 15rem;
+    .wrapper{
+        @include homeHeroImgDesktop;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 1rem;
+        background-position: center center;
+        position: relative;
+        padding: 11rem 0;
+    }
+
+    &__text-content{
+        width: 62rem;
+        padding-left: 10rem;
+
+        h1{
+            font-size: 7.8rem;
+            color: $color-light;
+        }
+        p{
+            margin: 3rem 0;
+            padding-right: 10rem;
+        }
+    }
+}
+
+
+// Hero Tablet
+@include tablet{
+    .hero{
+        &__text-content{
+        width: 47rem;
+        padding-left: 5rem;
+
+        h1{
+            font-size: 4.8rem;
+        }
+        p{
+            padding-right: 2rem;
+        }
+    }
+    }
+}
+
+
+
+// Hero Mobile
+@include mobile{
+    .hero{
+        .wrapper{
+            padding: 8rem 0;
+            @include homeHeroImgMobile;
+
+        }
+            &__text-content{
+                width: 100%;
+                padding: 0 1rem;
+                text-align: center;
+                
+                h1{
+                    font-size: 3.8rem;
+                }
+                p{
+                    padding-right: 0;
+                }
+            }
+    }
+}

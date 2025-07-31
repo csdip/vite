@@ -1,0 +1,65 @@
+@use '../utils/' as *;
+
+/* -------------------------------------
+            Mixin Desktop
+------------------------------------- */
+
+@mixin lg {
+    @media (max-width:1360px) {
+        @content;
+    }
+}
+
+@mixin homeHeroImgDesktop{
+    background-image: url('/img/hero-img.jpg');
+}
+
+@mixin homeHeroImgMobile{
+    background-image: url('/img/hero-mobile-img.webp');
+}
+
+@mixin aboutHeroImgDesktop{
+    background-image: url('/img/about-img.jpg');
+}
+
+@mixin aboutHeroImgMobile{
+    background-image: url('/img/about-mobile-img.webp');
+}
+
+@mixin planHeroImgDesktop{
+    background-image: url('/img/plan-img.jpg');
+}
+
+@mixin planHeroImgMobile{
+    background-image: url('/img/plan-mobile-img.jpg');
+}
+
+
+
+
+
+
+
+
+/* -------------------------------------
+            Mixin Tablet
+------------------------------------- */
+@mixin tablet {
+    @media (max-width:960px) {
+        @content;
+    }
+}
+
+
+
+
+
+/* -------------------------------------
+Mixin Mobile
+------------------------------------- */
+
+@mixin mobile {
+    @media (max-width:768px) {
+        @content;
+    }
+}

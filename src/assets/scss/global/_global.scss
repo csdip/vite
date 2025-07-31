@@ -1,0 +1,103 @@
+@use "../utils/" as *;
+
+// =============== Global CSS ===============
+
+*,
+*::after,
+*::before,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body,
+textarea,
+input {
+    font-size: 15px;
+    line-height: 1;
+    font-family: "Barlow", sans-serif;
+}
+
+body {
+    background-color: $color-bg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote {
+    font-size: 34px;
+    color: $color-secondary;
+    font-weight: $bold;
+    line-height: 1.1;
+    font-family: "Fraunces", serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+p,
+span {
+    color: $color-grey;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+section{
+    margin-bottom: 20rem;
+}
+
+button,
+.btn {
+    position: relative;
+    display: inline-block;
+    color: $color-light;
+    background-color: $color-primary;
+    font-size: 2rem;
+    font-weight: $bold;
+    font-family: $f-f-fraunces;
+    border-radius: 6px;
+    padding: 1.8rem 2.5rem;
+    cursor: pointer;
+    outline: none;
+    line-height: 1;
+    text-transform: normal;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    z-index: 1;
+}
+
+button:hover,
+.btn:hover {
+    opacity: .8;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1.5rem;
+    justify-content: space-between;
+}

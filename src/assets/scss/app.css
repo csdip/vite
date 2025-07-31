@@ -1,0 +1,441 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap");
+/* -------------------------------------
+             Template Fonts
+------------------------------------- */
+/* -------------------------------------
+            Template Colors
+------------------------------------- */
+.preloader {
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l5 1s infinite linear alternate;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #2C353E;
+  width: 100vw;
+  height: 100vh;
+  z-index: 88;
+}
+
+@keyframes l5 {
+  0% {
+    box-shadow: 20px 0 #0E8684, -20px 0 rgba(0, 0, 0, 0.1333333333);
+    background: #0E8684;
+  }
+  33% {
+    box-shadow: 20px 0 #0E8684, -20px 0 rgba(0, 0, 0, 0.1333333333);
+    background: rgba(0, 0, 0, 0.1333333333);
+  }
+  66% {
+    box-shadow: 20px 0 rgba(0, 0, 0, 0.1333333333), -20px 0 #0E8684;
+    background: rgba(0, 0, 0, 0.1333333333);
+  }
+  100% {
+    box-shadow: 20px 0 rgba(0, 0, 0, 0.1333333333), -20px 0 #0E8684;
+    background: #0E8684;
+  }
+}
+.container-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  display: none !important;
+}
+
+*,
+*::after,
+*::before,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body,
+textarea,
+input {
+  font-size: 15px;
+  line-height: 1;
+  font-family: "Barlow", sans-serif;
+}
+
+body {
+  background-color: #FEFCF6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote {
+  font-size: 34px;
+  color: #2C353E;
+  font-weight: 700;
+  line-height: 1.1;
+  font-family: "Fraunces", serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+p,
+span {
+  color: #DBDBDB;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+section {
+  margin-bottom: 20rem;
+}
+
+button,
+.btn {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  background-color: #0E8684;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Fraunces", serif;
+  border-radius: 6px;
+  padding: 1.8rem 2.5rem;
+  cursor: pointer;
+  outline: none;
+  line-height: 1;
+  text-transform: normal;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  z-index: 1;
+}
+
+button:hover,
+.btn:hover {
+  opacity: 0.8;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1.5rem;
+  justify-content: space-between;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-l-none {
+  display: none;
+}
+
+.d-m-none {
+  display: none;
+}
+
+.f-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-flow: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-start {
+  justify-content: start;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: end;
+}
+
+.align-start {
+  align-items: start;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
+.fix {
+  overflow: hidden;
+}
+
+.fix-x {
+  overflow-x: hidden;
+}
+
+.fix-y {
+  overflow-y: hidden;
+}
+
+.clear {
+  clear: both;
+}
+
+.m-l-auto {
+  margin-left: auto;
+}
+
+.m-r-auto {
+  margin-right: auto;
+}
+
+.m-inline {
+  margin-inline: auto;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.ml-0 {
+  margin-left: 0;
+}
+
+.mr-0 {
+  margin-right: 0;
+}
+
+.col {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.col-2 {
+  width: 16.66%;
+  float: left;
+  padding: 0 15px;
+}
+
+.col-3 {
+  width: 25%;
+  float: left;
+  padding: 0 15px;
+}
+
+.col-4 {
+  width: 33.33%;
+  float: left;
+  padding: 0 15px;
+}
+
+.col-5 {
+  width: 41.66%;
+  float: left;
+  padding: 0 15px;
+}
+
+.col-6 {
+  width: 50%;
+  float: left;
+  padding: 0 15px;
+}
+
+.col-7 {
+  width: 58.47%;
+  float: left;
+  padding: 0 15px;
+}
+
+.col-8 {
+  width: 66.66%;
+  float: left;
+  padding: 0 15px;
+}
+
+.col-9 {
+  width: 75%;
+  float: left;
+  padding: 0 15px;
+}
+
+.col-10 {
+  width: 83.33%;
+  float: left;
+  padding: 0 15px;
+}
+
+.col-11 {
+  width: 91.74%;
+  float: left;
+  padding: 0 15px;
+}
+
+.col-12 {
+  width: 100%;
+  float: left;
+  padding: 0 15px;
+}
+
+/* -------------------------------------
+    X-Large Screen 1920px & Above
+------------------------------------- */
+@media (min-width: 1360px) {
+  .container {
+    width: 1280px;
+  }
+  .collection .container {
+    width: 1122px;
+  }
+  .works .container {
+    width: 1044px;
+  }
+  .works .page-works-container {
+    width: 1280px;
+  }
+}
+/* -------------------------------------
+        Large Screen 1440px
+------------------------------------- */
+/* -------------------------------------
+        Medium Screen 1200px
+------------------------------------- */
+/* -------------------------------------
+        Tablet Device 960px
+------------------------------------- */
+@media (max-width: 960px) {
+  section {
+    margin-bottom: 10rem;
+  }
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6,
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-10,
+  .col-11,
+  .col-12 {
+    width: 100%;
+  }
+  .container {
+    padding: 0 4rem;
+  }
+}
+/* -------------------------------------
+        Mobile Device 768px
+------------------------------------- */
+@media (max-width: 768px) {
+  body,
+  p,
+  ol,
+  li,
+  ul {
+    font-size: 1.6rem !important;
+  }
+  .container {
+    padding: 0 2rem;
+  }
+  .overlay {
+    position: absolute;
+    top: 10rem;
+    left: 2rem;
+    right: 2rem;
+    height: 100vh;
+    visibility: hidden;
+    opacity: 0;
+    background-image: linear-gradient(to bottom, #ffffff, transparent);
+    transition: all 0.4s ease;
+    z-index: 9;
+  }
+  .overlay.active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+/* -------------------------------------
+        Small Device 480px
+------------------------------------- */
+/* -------------------------------------
+            Mixin Desktop
+------------------------------------- */
+/* -------------------------------------
+            Mixin Tablet
+------------------------------------- */
+/* -------------------------------------
+Mixin Mobile
+------------------------------------- *//*# sourceMappingURL=app.css.map */

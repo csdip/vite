@@ -1,0 +1,65 @@
+@use '../../../utils/' as *;
+@use '../../../global/' as *;
+
+// Works Desktop
+.works{
+    
+    .bg-container{
+        background-image: url('/img/bg-texture.png');
+        background-repeat: repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 8rem 4rem;
+        border-radius: 1rem;
+    }
+
+    .circle{
+        background-image: url('/img/bg-texture.png');
+        background-repeat: repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__single{
+        &.page-choose{
+            h4{
+                color: $color-light;
+            }
+            p{
+                color: $color-light;
+            }
+        }
+    }
+}
+
+
+// Works Tablet
+@include lg{
+    .works{
+        .container{
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+// Works Mobile
+@include mobile{
+    .works{
+        .sec-title{
+            display: none;
+        }
+
+        &__single{
+            h4{
+                margin-bottom: 2rem;
+            }
+            strong{
+                font-size: 5.2rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
